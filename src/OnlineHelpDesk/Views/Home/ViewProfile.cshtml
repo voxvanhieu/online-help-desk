@@ -1,0 +1,44 @@
+﻿@model OnlineHelpDesk.Models.ProfileViewModell
+
+@{
+    ViewBag.Title = "ViewProfile";
+}
+
+<div class="container content" style="background-color:beige;margin-top:1px;margin-bottom:1%">
+
+    <h2 style="text-align:center; color:red">Your Profile Information</h2>
+    <hr />
+
+    <div class="col-lg-4 col-md-4 col-sm-4">
+        <dl class="dl-horizontal" style="margin-top:5%">
+            <dd>
+                @Html.DisplayFor(model => model.Avatar)
+            </dd>
+            <dt>
+
+                @Html.DisplayNameFor(model => model.Avatar)
+            </dt>
+        </dl>
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-8">
+
+        <dl style="margin-top:4%"> 
+            <dd>
+                Full Name: @Html.DisplayFor(model => model.FullName)
+            </dd>
+
+            <dd>
+                Address: @Html.DisplayFor(model => model.Address)
+            </dd>
+
+            <dd>
+                Email: @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dd>
+                Created At: @Html.DisplayFor(model => model.CreatedAt)
+            </dd>
+
+        </dl>
+    </div>
+</div>

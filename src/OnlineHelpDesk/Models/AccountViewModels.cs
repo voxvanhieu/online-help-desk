@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace OnlineHelpDesk.Models
@@ -133,4 +134,24 @@ namespace OnlineHelpDesk.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
     }
+    public class ProfileViewModell
+    {
+        [Key]
+        public int UserId { get; set; }
+        public string FullName { get; set; }
+        public string Address { get; set; }
+
+        [Required]
+        [EmailAddress]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
+
+        [DataType(DataType.ImageUrl)]
+        public string Avatar { get; set; }
+
+        [DataType(DataType.DateTime)]
+        public DateTime? CreatedAt { get; set; }
+
+    }
+
 }

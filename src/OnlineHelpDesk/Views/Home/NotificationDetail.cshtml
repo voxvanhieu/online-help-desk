@@ -1,0 +1,53 @@
+﻿@model OnlineHelpDesk.Models.Notification
+
+@{
+    ViewBag.Title = "ViewNotificationDetail";
+}
+
+<div>
+    <hr />
+    <h2 style="text-align:center;color:red">Notification Detail</h2>
+    <dl class="content dl-horizontal" style="width:80%; background-color:beige">
+        <dt>
+            @Html.DisplayNameFor(model => model.User.UserIdentityCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.UserIdentityCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Message)
+        </dt>
+
+        <dd>
+            <form>
+                <textarea name="message" rows="5" cols="50">
+                    @Html.DisplayFor(model => model.Message)
+                </textarea>
+            </form>
+            @Html.DisplayFor(model => model.Message)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Seen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Seen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedAt)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
