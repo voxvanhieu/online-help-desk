@@ -37,7 +37,7 @@ namespace OnlineHelpDesk.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult LoadSampleData()
         {
-            DatabaseHelper.SeedData();
+            _ = DatabaseHelper.SeedData();
             ViewBag.Message = "Sample data loaded";
             return RedirectToAction("Index", "Home");
         }
@@ -76,7 +76,7 @@ namespace OnlineHelpDesk.Controllers
         // IMPORT DATA FROM EXCEL
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> UploadExcel(ImportDataViewModel model, string role = "Student")
+        public ActionResult UploadExcel(ImportDataViewModel model, string role = "Student")
         {
             if (ModelState.IsValid)
             {
@@ -126,7 +126,7 @@ namespace OnlineHelpDesk.Controllers
                         }
                     }
 
-                    await ProfileModels2Database(listProfile);
+                    _ = ProfileModels2Database(listProfile);
 
                     return View("ViewImported", listProfile);
                 }
@@ -144,11 +144,11 @@ namespace OnlineHelpDesk.Controllers
         {
             await Task.Run(() =>
             {
-                using (var userService = new UserService(db))
+                using (var userService = new UserService())
                 {
                     listProfile.ForEach((p) =>
                     {
-                        userService.CreateUser(new ApplicationUser
+                        _ = userService.CreateUser(new ApplicationUser
                         {
                             UserName = p.UserIdentity,
                             Email = p.Email,

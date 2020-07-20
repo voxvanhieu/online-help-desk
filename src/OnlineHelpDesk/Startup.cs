@@ -15,7 +15,7 @@ namespace OnlineHelpDesk
             ConfigureAuth(app);
 
             // Initialize default roles and admin
-            DatabaseHelper.InitializeRequiredData();
+            DatabaseHelper.InitializeRequiredData().Wait();
         }
     }
 }

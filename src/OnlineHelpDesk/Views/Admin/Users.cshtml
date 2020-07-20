@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="col-lg-2 d-flex align-items-center flex-column flex-lg-row text-center text-md-left">
                                     <p class="mb-0 mt-3 mt-lg-0">
-                                        @Html.ActionLink("Edit", "Edit", new { id = item.UserIdentity }, new { @class = "text-dark px-1" })|@Html.ActionLink("Details", "Details", new { id = item.UserIdentity }, new { @class = "text-dark px-1" })|@Html.ActionLink("Delete", "Delete", new { id = item.UserIdentity }, new { @class = "text-dark px-1" })
+                                        @Html.ActionLink("Edit", "Edit", new { id = item.UserIdentity }, new { @class = "text-dark px-1" })|@Html.RouteLink("Details", "Profile", new { user = item.UserIdentity }, new { @class = "text-dark px-1" })|@Html.ActionLink("Delete", "Delete", new { id = item.UserIdentity }, new { @class = "text-dark px-1" })
                                     </p>
                                 </div>
                             </div>
