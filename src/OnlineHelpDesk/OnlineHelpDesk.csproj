@@ -261,6 +261,7 @@
     <Content Include="Content\AppStyleSheet\css\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\orion-font.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\AppJavaScript\bootstrap\bootstrap.bundle.js" />
     <Content Include="Scripts\AppJavaScript\bootstrap\bootstrap.bundle.min.js" />
@@ -506,7 +507,14 @@
     <Content Include="Content\AppStyleSheet\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\AppStyleSheet\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\AppStyleSheet\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\orion-font.eot" />
+    <Content Include="fonts\orion-font.ttf" />
+    <Content Include="fonts\orion-font.woff" />
+    <Content Include="fonts\orion-font.woff2" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\onlinehelpdesk - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\onlinehelpdesk - ReadOnly - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\onlinehelpdesk - Web Deploy.pubxml" />
     <None Include="Scripts\AppJavaScript\jquery-validation\jquery.validate-vsdoc.js" />
     <Content Include="Views\Shared\Home\_ListRequestLayout.cshtml" />
     <Content Include="Views\Shared\Home\_ViewProfileLayout.cshtml" />
